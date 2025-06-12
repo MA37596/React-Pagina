@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './Cookieclicker.module.css'
 
-export function CookieClicker() {
+const CookieClicker = () => {
     const [score, setScore] = useState(0)
     const [grandmas, setGrandmas] = useState(0)
 
@@ -45,3 +45,5 @@ export function CookieClicker() {
         </section>
     )
 }
+
+export default CookieClicker;

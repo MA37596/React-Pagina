@@ -2,7 +2,7 @@ import styles from './Top10.module.css'
 export function Top10(){
     return(
         <section className={styles.top10}>
-            <h2>Top 10 Albums naar mijn </h2>
+            <h2>Top 10 Albums naar mijn Mening</h2>
             <ol className={styles.list}>
                 <li>Lil Uzi Vert - Pink Tape</li>
                 <li>Kanye West - My Beautiful Dark Fantasy</li>

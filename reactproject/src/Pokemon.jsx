@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import styles from './Pokemon.module.css'
 
-export function Pokemon() {
+const Pokemon = () => {
     const [pokemon, setPokemon] = useState(null)
     const [error, setError] = useState(null)
     const [pokemonId, setPokemonId] = useState(254) 
@@ -13,7 +13,7 @@ export function Pokemon() {
         fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Pokemon kon niet worden geladen')
+                    throw new Error('Pokemon word niet worden geladen')
                 }
                 return response.json()
             })
@@ -56,3 +56,5 @@ export function Pokemon() {
         </section>
     )
 }
+
+export default Pokemon;
