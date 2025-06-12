@@ -1,18 +1,28 @@
 import styles from './Top10Item.module.css'
+import pinktape from './album fotos/pinktape.jpg'
+import mbdtf from './album fotos/mbdtf.jpg'
+import wholelottared from './album fotos/wholelottared.png'
+import clb from './album fotos/Drake_-_Certified_Lover_Boy.png'
+import eternalAtake from './album fotos/Eternal_Atake_Lil_Uzi_Vert.jpg'
+import astroworld from './album fotos/astroworld.jpg'
+import eternalAtake2 from './album fotos/600x600bb-1.webp'
+import luvIsRage2 from './album fotos/ab67616d0000b2730e4e16d910115fead3e83496.jpg'
+import dieLit from './album fotos/Die_Lit_by_Playboi_Carti.jpg'
+import music from './album fotos/music.jpg'
 
-export function Top10Item({ title, author, number }) {
+function Top10Item({ title, author, number }) {
     const getAlbumCover = (title) => {
         const covers = {
-            'Lil Uzi Vert - Pink Tape': '/src/album fotos/pinktape.jpg',
-            'Kanye West - My Beautiful Dark Fantasy': '/src/album fotos/mbdtf.jpg',
-            'Playboi Carti - Whole Lotta Red': '/src/album fotos/wholelottared.png',
-            'Drake - Certified Lover Boy': '/src/album fotos/Drake_-_Certified_Lover_Boy.png',
-            'Lil Uzi Vert - Eternal Atake': '/src/album fotos/Eternal_Atake_Lil_Uzi_Vert.jpg',
-            'Travis Scott - Astroworld': '/src/album fotos/astroworld.jpg',
-            'Lil Uzi Vert - Eternal Atake 2': '/src/album fotos/600x600bb-1.webp',
-            'Lil Uzi Vert - Luv Is Rage 2': '/src/album fotos/ab67616d0000b2730e4e16d910115fead3e83496.jpg',
-            'Playboi Carti - Die Lit': '/src/album fotos/Die_Lit_by_Playboi_Carti.jpg',
-            'Playboi Carti - Music': '/src/album fotos/music.jpg'
+            'Lil Uzi Vert - Pink Tape': pinktape,
+            'Kanye West - My Beautiful Dark Fantasy': mbdtf,
+            'Playboi Carti - Whole Lotta Red': wholelottared,
+            'Drake - Certified Lover Boy': clb,
+            'Lil Uzi Vert - Eternal Atake': eternalAtake,
+            'Travis Scott - Astroworld': astroworld,
+            'Lil Uzi Vert - Eternal Atake 2': eternalAtake2,
+            'Lil Uzi Vert - Luv Is Rage 2': luvIsRage2,
+            'Playboi Carti - Die Lit': dieLit,
+            'Playboi Carti - Music': music
         }
         return covers[title] || ''
     }
@@ -33,7 +43,7 @@ export function Top10Item({ title, author, number }) {
     )
 }
 
-export function Top10List() {
+const Top10List = () => {
     const albums = [
         { title: "Lil Uzi Vert - Pink Tape", author: "Lil Uzi Vert", number: "1" },
         { title: "Kanye West - My Beautiful Dark Fantasy", author: "Kanye West", number: "2" },

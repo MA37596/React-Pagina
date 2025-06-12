@@ -1,28 +1,32 @@
 import React from 'react'
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Navbar from './Navbar'
 import About from './pages/About'
 import Games from './pages/Games'
 import Contact from './Contact'
 import Top10 from './pages/Top10'
+import AboutMe from './Aboutme'
+import CookieClicker from './Cookieclicker'
+import Pokemon from './Pokemon'
+import Top10List from './Top10item'
+import GalleryComponent from './GalleryComponent'
 
 function App() {
   return (
-    <div className="app">
-      <Router>
+    <Router>
+      <div className="App">
         <Navbar />
-        <main className="container">
-          <Routes>
-            <Route path="/" element={<About />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/top10" element={<Top10 />} />
-            <Route path="/games" element={<Games />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-      </Router>
-    </div>
+        <Routes>
+          <Route path="/" element={<AboutMe />} />
+          <Route path="/cookieclicker" element={<CookieClicker />} />
+          <Route path="/pokemon" element={<Pokemon />} />
+          <Route path="/top10" element={<Top10List />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<GalleryComponent />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
