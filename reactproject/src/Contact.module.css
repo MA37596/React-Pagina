@@ -34,4 +34,19 @@
 .faqSection p {
   color: #666;
   font-style: italic;
+}
+
+.contactInfo {
+  margin-bottom: 20px;
+}
+
+.contactInfo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contactInfo p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 } 
